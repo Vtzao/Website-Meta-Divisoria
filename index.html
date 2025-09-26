@@ -7,29 +7,39 @@
     <title>Divisórias Eucatex e Drywall em Curitiba e SJP | Meta Divisórias</title>
 
     <meta name="description" content="Instalação de divisórias Eucatex, Drywall e Biombos em Curitiba, São José dos Pinhais e região. Soluções para escritórios e ambientes comerciais. Orçamento rápido via WhatsApp!">
-
     <meta name="keywords" content="divisórias em curitiba, divisórias eucatex curitiba, divisórias drywall curitiba, instalação de divisórias são josé dos pinhais, biombos para escritório, meta divisórias">
-
     <link rel="canonical" href="https://metadivisorias.com.br/">
 
-    <link rel="icon" href="img/favicons/favicon-16x16.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <meta name="theme-color" content="#1E2D3B">
 
     <meta property="og:title" content="Meta Divisórias - Soluções em Eucatex e Drywall em Curitiba">
     <meta property="og:description" content="Transformamos seus ambientes com divisórias de alta qualidade. Atendemos Curitiba e Região Metropolitana.">
-    <meta property="og:image" content="https://metadivisorias.com.br/img/bg.jpg"> <meta property="og:url" content="https://metadivisorias.com.br/">
+    <meta property="og:image" content="https://metadivisorias.com.br/img/bg.webp">
+    <meta property="og:url" content="https://metadivisorias.com.br/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Meta Divisórias - Soluções em Eucatex e Drywall em Curitiba">
     <meta name="twitter:description" content="Transformamos seus ambientes com divisórias de alta qualidade. Atendemos Curitiba e Região Metropolitana.">
-    <meta name="twitter:image" content="https://metadivisorias.com.br/img/bg.jpg"> <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="twitter:image" content="https://metadivisorias.com.br/img/bg.webp">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN9J9250HG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-CN9J9250HG');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <script type="application/ld+json">
@@ -41,41 +51,18 @@
       "telephone": "+5541987303650",
       "url": "https://metadivisorias.com.br/",
       "logo": "https://metadivisorias.com.br/logotipometa.png",
-      "image": "https://metadivisorias.com.br/img/bg.jpg",
+      "image": "https://metadivisorias.com.br/img/bg.webp",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Curitiba",
         "addressRegion": "PR",
         "addressCountry": "BR"
       },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Curitiba"
-        },
-        {
-          "@type": "City",
-          "name": "São José dos Pinhais"
-        },
-        {
-          "@type": "City",
-          "name": "Colombo"
-        },
-        {
-          "@type": "City",
-          "name": "Pinhais"
-        },
-        {
-          "@type": "City",
-          "name": "Araucária"
-        }
-      ],
+      "areaServed": ["Curitiba", "São José dos Pinhais", "Colombo", "Pinhais", "Araucária"],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+5541987303650",
-        "contactType": "customer service",
-        "areaServed": "BR",
-        "availableLanguage": "Portuguese"
+        "contactType": "customer service"
       }
     }
     </script>
@@ -94,6 +81,7 @@
     </script>
 
     <style>
+        html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; }
         .gallery-item { transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; cursor: pointer; }
         .gallery-item.hidden { transform: scale(0.9); opacity: 0; width: 0; height: 0; padding: 0; margin: 0; overflow: hidden; }
@@ -101,17 +89,50 @@
         .modal { transition: opacity 0.4s ease; }
         .modal-content { animation: zoom 0.3s ease-out; }
         @keyframes zoom { from {transform: scale(0.9)} to {transform: scale(1)} }
+
+        /* ----- CSS DO PRELOADER ----- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: #1E2D3B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.75s ease, visibility 0.75s ease;
+        }
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.2);
+            border-top-color: #EDCD1F;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .preloader-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
+
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
 
     <header class="bg-meta-dark shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-3">
-                <img src="logotipometa.png" alt="Logotipo Meta Divisórias em Curitiba" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/48x48/EDCD1F/1E2D3B?text=M';">
+            <a href="#inicio" class="flex items-center space-x-3">
+                <img src="logotipometa.png" alt="Logotipo Meta Divisórias em Curitiba" class="h-12" width="auto" height="38">
                 <div>
-                    <span class="block text-meta-yellow text-xl font-bold leading-tight">META</span>
-                    <span class="block text-meta-yellow text-sm font-light leading-tight tracking-wider">DIVISÓRIAS</span>
+                    <span class="block text-gray-100 text-xl font-bold leading-tight">META</span>
+                    <span class="block text-gray-100 text-sm font-light leading-tight tracking-wider">DIVISÓRIAS</span>
                 </div>
             </a>
             <div class="hidden md:flex items-center space-x-8">
@@ -121,7 +142,7 @@
                 <a href="#contato" class="text-gray-300 hover:text-meta-yellow transition duration-300 font-medium">CONTATO</a>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-300 hover:text-meta-yellow focus:outline-none" aria-label="Abrir menu de navegação">
+                <button id="mobile-menu-button" class="text-gray-300 hover:text-meta-yellow focus:outline-none" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -137,9 +158,7 @@
     <main>
         <section id="inicio" class="relative bg-gray-800 text-white">
             <div class="absolute inset-0">
-                <img src="bg.jpg"
-                     alt="Escritório moderno com divisórias de vidro e Eucatex instalado pela Meta Divisórias"
-                     class="w-full h-full object-cover opacity-40">
+                <img src="bg.webp" alt="Escritório moderno com divisórias de vidro e Eucatex instalado pela Meta Divisórias" class="w-full h-full object-cover opacity-40" width="1920" height="1080">
             </div>
             <div class="relative container mx-auto px-6 py-24 md:py-32 lg:py-40 text-center flex flex-col items-center">
                  <div class="flex items-center space-x-4 mb-8">
@@ -151,7 +170,7 @@
                  </div>
                  <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">Divisórias Eucatex e Drywall em Curitiba e Região</h1>
                  <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transformamos seus espaços com design, praticidade e qualidade. Atendemos projetos em <strong>Curitiba, São José dos Pinhais e toda a região metropolitana.</strong></p>
-                 <a href="https://wa.me/5541987889544?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+instala%C3%A7%C3%A3o+de+divis%C3%B3rias." target="_blank" class="whatsapp-button inline-flex items-center bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform duration-300">
+                 <a href="https://wa.me/5541987303650?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+instala%C3%A7%C3%A3o+de+divis%C3%B3rias." target="_blank" class="whatsapp-button inline-flex items-center bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform duration-300">
                      <i class="bi bi-whatsapp mr-3"></i>
                      Solicitar Orçamento no WhatsApp
                  </a>
@@ -161,29 +180,29 @@
         <section id="servicos" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossos Serviços de Instalação de Divisórias</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossos Serviços de Instalação</h2>
                     <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Soluções completas para a divisão e otimização de ambientes corporativos e comerciais.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="img/divi-eucatex.png" alt="Instalação de divisórias Eucatex em escritório" class="w-full h-56 object-cover">
+                        <img src="img/divi-eucatex.webp" alt="Instalação de divisórias Eucatex em escritório" class="w-full h-56 object-cover" loading="lazy" width="398" height="224">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Divisórias em Eucatex</h3>
-                            <p class="text-gray-600">Solução prática e versátil com excelente custo-benefício. Ideal para escritórios, lojas e indústrias que buscam rapidez na montagem e flexibilidade em <strong>Curitiba e região</strong>.</p>
+                            <p class="text-gray-600">Solução prática e versátil com excelente custo-benefício. Ideal para escritórios, lojas e indústrias.</p>
                         </div>
                     </div>
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="img/drywall1.jpg" alt="Parede de Drywall com acabamento refinado" class="w-full h-56 object-cover">
+                        <img src="img/drywall1.webp" alt="Parede de Drywall com acabamento refinado" class="w-full h-56 object-cover" loading="lazy" width="398" height="224">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Paredes e Forros em Drywall</h3>
-                            <p class="text-gray-600">Acabamento refinado, com ótimo isolamento acústico e térmico. Perfeito para criar ambientes sofisticados e privativos com qualidade de alvenaria, mas com montagem limpa e rápida.</p>
+                            <p class="text-gray-600">Acabamento refinado, com ótimo isolamento acústico e térmico. Montagem limpa e rápida.</p>
                         </div>
                     </div>
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="img/Biombos-em-Eucatex_edited.jpg" alt="Biombos móveis para divisão de estações de trabalho" class="w-full h-56 object-cover">
+                        <img src="img/Biombos-em-Eucatex_edited.webp" alt="Biombos móveis para divisão de estações de trabalho" class="w-full h-56 object-cover" loading="lazy" width="398" height="224">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Biombos Modulares</h3>
-                            <p class="text-gray-600">Flexibilidade para criar ou separar espaços de forma temporária ou permanente. Solução móvel e elegante para organizar seu ambiente conforme a necessidade.</p>
+                            <p class="text-gray-600">Flexibilidade para criar ou separar espaços de forma temporária ou permanente.</p>
                         </div>
                     </div>
                 </div>
@@ -194,16 +213,12 @@
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-meta-yellow mb-4">Parcerias de Sucesso em Curitiba</h2>
-                        <p class="text-lg text-gray-300 mb-6">
-                            Valorizamos a colaboração com profissionais que transformam ideias em realidade. Se você é <strong>engenheiro, arquiteto ou projetista em Curitiba ou região</strong>, temos condições especiais e suporte dedicado para garantir que seus projetos sejam executados com a máxima qualidade e eficiência.
-                        </p>
-                        <a href="#contato" class="inline-block bg-meta-yellow text-meta-dark font-bold py-3 px-8 rounded-full shadow-lg transition-transform duration-300 hover:scale-105">
-                            Seja um Parceiro
-                        </a>
+                        <h2 class="text-3xl md:text-4xl font-bold text-meta-yellow mb-4">Parcerias de Sucesso</h2>
+                        <p class="text-lg text-gray-300 mb-6">Valorizamos a colaboração com <strong>engenheiros, arquitetos e projetistas em Curitiba e região</strong>. Oferecemos condições especiais e suporte dedicado para executar seus projetos com máxima qualidade e eficiência.</p>
+                        <a href="#contato" class="inline-block bg-meta-yellow text-meta-dark font-bold py-3 px-8 rounded-full shadow-lg transition-transform duration-300 hover:scale-105">Seja um Parceiro</a>
                     </div>
                     <div class="mt-8 md:mt-0">
-                        <img src="img/irreconhecivel-homem-sentado-na-mesa-com-desenhos-tecnicos-e-olhando-para-planta-baixa-no-tablet.jpg" alt="Arquiteto analisando planta de projeto de divisórias" class="rounded-lg shadow-xl w-full">
+                        <img src="img/irreconhecivel-homem-sentado-na-mesa-com-desenhos-tecnicos-e-olhando-para-planta-baixa-no-tablet.webp" alt="Arquiteto analisando planta de projeto de divisórias" class="rounded-lg shadow-xl w-full" loading="lazy" width="600" height="400">
                     </div>
                 </div>
             </div>
@@ -222,23 +237,30 @@
                     <button class="filter-btn bg-white text-gray-700 py-2 px-5 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition" data-filter="biombos">Biombos</button>
                 </div>
                 <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div class="gallery-item" data-category="eucatex"><img src="img/divi-eucatex.png" alt="Projeto com divisórias Eucatex para escritório em Curitiba" class="rounded-lg shadow-md w-full h-full object-cover"></div>
-                    <div class="gallery-item" data-category="drywall"><img src="img/drywall1.jpg" alt="Projeto com parede de Drywall em ambiente corporativo" class="rounded-lg shadow-md w-full h-full object-cover"></div>
-                    <div class="gallery-item" data-category="biombos"><img src="img/Biombos-em-Eucatex_edited.jpg" alt="Biombos Eucatex para separar estações de trabalho" class="rounded-lg shadow-md w-full h-full object-cover"></div>
-                    <div class="gallery-item" data-category="eucatex"><img src="img/eucatex.png" alt="Instalação de divisória Eucatex com vidro" class="rounded-lg shadow-md w-full h-full object-cover"></div>
-                    <div class="gallery-item" data-category="drywall"><img src="img/301301_234027069979838_1395505934_n.jpg" alt="Estrutura de divisória Drywall antes do acabamento em obra de São José dos Pinhais" class="rounded-lg shadow-md w-full h-full object-cover"></div>
-                    <div class="gallery-item" data-category="drywall"><img src="img/drywall3.jpg" alt="Detalhe do acabamento em parede de Drywall" class="rounded-lg shadow-md w-full h-full object-cover"></div>
-                    <div class="gallery-item" data-category="biombos"><img src="img/biombos.jpg" alt="Criação de baias com biombos para call center" class="rounded-lg shadow-md w-full h-full object-cover"></div>
-                    <div class="gallery-item" data-category="eucatex"><img src="img/eucatex3.jpg" alt="Divisórias Eucatex cinza em ambiente industrial" class="rounded-lg shadow-md w-full h-full object-cover"></div>
+                    <div class="gallery-item" data-category="eucatex"><img src="img/divi-eucatex.webp" loading="lazy" alt="Projeto com divisórias Eucatex para escritório em Curitiba" class="rounded-lg shadow-md w-full h-full object-cover" width="300" height="300"></div>
+                    <div class="gallery-item" data-category="drywall"><img src="img/drywall1.webp" loading="lazy" alt="Projeto com parede de Drywall em ambiente corporativo" class="rounded-lg shadow-md w-full h-full object-cover" width="300" height="300"></div>
+                    <div class="gallery-item" data-category="biombos"><img src="img/Biombos-em-Eucatex_edited.webp" loading="lazy" alt="Biombos Eucatex para separar estações de trabalho" class="rounded-lg shadow-md w-full h-full object-cover" width="300" height="300"></div>
+                    <div class="gallery-item" data-category="eucatex"><img src="img/eucatex.webp" loading="lazy" alt="Instalação de divisória Eucatex com vidro" class="rounded-lg shadow-md w-full h-full object-cover" width="300" height="300"></div>
+                    <div class="gallery-item" data-category="drywall"><img src="img/301301_234027069979838_1395505934_n.webp" loading="lazy" alt="Estrutura de divisória Drywall em obra" class="rounded-lg shadow-md w-full h-full object-cover" width="300" height="300"></div>
+                    <div class="gallery-item" data-category="drywall"><img src="img/drywall3.webp" loading="lazy" alt="Detalhe do acabamento em parede de Drywall" class="rounded-lg shadow-md w-full h-full object-cover" width="300" height="300"></div>
+                    <div class="gallery-item" data-category="biombos"><img src="img/biombos.webp" loading="lazy" alt="Criação de baias com biombos para call center" class="rounded-lg shadow-md w-full h-full object-cover" width="300" height="300"></div>
+                    <div class="gallery-item" data-category="eucatex"><img src="img/eucatex3.webp" loading="lazy" alt="Divisórias Eucatex cinza em ambiente industrial" class="rounded-lg shadow-md w-full h-full object-cover" width="300" height="300"></div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="py-16 md:py-24 bg-white">
+        <section id="contato" class="bg-white py-16 md:py-24">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Entre em Contato</h2>
-                    <p class="mt-4 text-lg text-gray-600">Peça seu orçamento sem compromisso. Estamos prontos para atender você em Curitiba e região!</p>
+
+                <div class="max-w-3xl mx-auto mb-12">
+                    <div class="bg-meta-dark rounded-lg p-8 text-center shadow-xl transform hover:scale-[1.02] transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold text-white mb-2">A Forma Mais Rápida de nos Contatar</h3>
+                        <p class="text-gray-300 mb-6">Estamos prontos para transformar seu ambiente. <br>Entre em contato e solicite seu orçamento sem compromisso.</p>
+                        <a href="https://wa.me/5541987303650?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento+para+instala%C3%A7%C3%A3o+de+divis%C3%B3rias." target="_blank" class="whatsapp-button inline-flex items-center bg-green-500 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-transform duration-300 text-xl">
+                            <i class="bi bi-whatsapp mr-3 text-2xl"></i>
+                            <span>Orçamento Rápido via WhatsApp</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -270,14 +292,14 @@
                                 <i class="bi bi-whatsapp mr-4 text-green-500 text-2xl"></i>
                                 <div>
                                     <h4 class="font-semibold text-lg">WhatsApp</h4>
-                                    <a href="https://wa.me/5541987889544?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento." target="_blank" class="hover:text-blue-600 transition-colors">+55 (41) 98788-9544</a>
+                                    <a href="https://wa.me/5541987303650?text=Ol%C3%A1%21+Gostaria+de+um+or%C3%A7amento." target="_blank" class="hover:text-blue-600 transition-colors">+55 (41) 98730-3650</a>
                                 </div>
                             </div>
                             <div class="flex items-center">
                                 <i class="bi bi-telephone-fill mr-4 text-blue-600 text-2xl"></i>
                                 <div>
                                     <h4 class="font-semibold text-lg">Telefone</h4>
-                                     <a href="tel:+554198788-9544" class="hover:text-blue-600 transition-colors">+55 (41) 98788-9544</a>
+                                     <a href="tel:+5541987303650" class="hover:text-blue-600 transition-colors">+55 (41) 98730-3650</a>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +341,7 @@
             </div>
             <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm">
                 <p>&copy; 2025 Meta Divisórias. Todos os direitos reservados. <br>
-        Desenvolvido por <a href="https://www.linkedin.com/in/vitor-pereira-co/" target="_blank" rel="noopener noreferrer" class="font-semibold text-meta-yellow hover:underline">Vitor Pereira</a></p>
+                Desenvolvido por <a href="https://www.linkedin.com/in/vitor-pereira-co/" target="_blank" rel="noopener noreferrer" class="font-semibold text-meta-yellow hover:underline">Vitor Pereira</a></p>
             </div>
         </div>
     </footer>
@@ -334,7 +356,17 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isExpanded = mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Lógica para fechar menu mobile ao clicar no link
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
         });
 
         // Lógica para o filtro da galeria
@@ -350,7 +382,7 @@
                 button.classList.remove('bg-white', 'text-gray-700');
                 const filter = button.getAttribute('data-filter');
                 galleryItems.forEach(item => {
-                    item.classList.add('hidden'); // Oculta todos primeiro
+                    item.classList.add('hidden');
                     if (filter === 'all' || item.getAttribute('data-category') === filter) {
                         item.classList.remove('hidden');
                     }
@@ -366,7 +398,7 @@
             item.addEventListener('click', () => {
                 const img = item.querySelector('img');
                 modalImage.src = img.src;
-                modalImage.alt = img.alt; // Passa o alt da imagem clicada para o modal
+                modalImage.alt = img.alt;
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
             });
@@ -382,6 +414,21 @@
                 closeModal();
             }
         });
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-974567756"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-974567756');
+    </script>
+
+    <script>
+        window.onload = function() {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('preloader-hidden');
+        }
     </script>
 
 </body>
